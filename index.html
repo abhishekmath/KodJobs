@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Search Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Add Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Left side image -->
+        <div class="left-section">
+            <div class="overlay"></div>
+            <!--<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Job Search">-->
+            <img src="img/imgjob.png" alt="Job Search">
+
+            <div class="left-content">
+                <h1>Find Your Dream Job</h1>
+                <p>Connect with the best companies and opportunities worldwide</p>
+            </div>
+        </div>
+
+        <!-- Right section -->
+        <div class="right-section">
+            <div class="auth-container">
+                <!-- Login Form -->
+                <div class="login-section">
+                    <h2><i class="fas fa-sign-in-alt"></i> Login</h2>
+                    <form id="loginForm">
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="loginUsername" placeholder="Username" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="loginPassword" placeholder="Password" required>
+                        </div>
+                        <button type="submit">Login <i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+
+                <!-- Sign Up Form -->
+                <div class="signup-section">
+                    <h2><i class="fas fa-user-plus"></i> Sign Up</h2>
+                    <form id="signupForm">
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="signupUsername" placeholder="Username" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="signupPassword" placeholder="Password" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="signupEmail" placeholder="Email" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-calendar"></i>
+                            <input type="date" id="signupDOB" required>
+                        </div>
+                        <button type="submit">Sign Up <i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Job Listings Section -->
+        <div class="job-listings" id="jobListings" style="display: none;">
+            <nav class="jobs-nav">
+                <div class="nav-header">
+                    <button id="backButton" class="back-button">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <h2>Available Jobs</h2>
+                    <div class="nav-actions">
+                        <button id="logoutButton" class="logout-button">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </button>
+                    </div>
+                </div>
+                <div class="search-section">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            placeholder="Search for job titles, companies, or locations..." 
+                            autocomplete="off"
+                            spellcheck="true"
+                        >
+                    </div>
+                    <button id="searchButton">
+                        <i class="fas fa-search"></i>
+                        Search
+                    </button>
+                </div>
+            </nav>
+            <div class="job-cards" id="jobCards">
+                <!-- existing job cards will be here -->
+            </div>
+            <div id="loadingIndicator" class="loading-indicator" style="display: none;">
+                <div class="spinner"></div>
+                <p>Loading more jobs...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
